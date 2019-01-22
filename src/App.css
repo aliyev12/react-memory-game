@@ -1,32 +1,107 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Alfa Slab One', cursive;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.App > h1 {
+    font-variant: small-caps;
+    font-size: 80px;
+    color: rgb(95, 138, 247);
+    font-style: italic;
+    text-shadow: 20px 20px 10px rgba(250, 181, 237, 0.954);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App > button {
+    font-family: inherit;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: rgb(120, 120, 230);
+    border: 2px solid rgba(250, 181, 237, 0.954);
+    box-shadow: 5px 5px 5px #999;
+    outline:none;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.App > button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 5px #999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App > button > i {
+    color: rgb(255, 0, 238);
+}
+
+.App .you-won {
+    font-family: inherit;
+    font-size: 100px;
+    font-style: italic;
+    color:  rgba(240, 75, 210, 0.954);
+    text-shadow: 25px 25px 20px rgba(95, 138, 247, 0.447);
+    position: absolute;
+    top: 40%;
+}
+
+.App .you-won .emojies {
+    display: block;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol'; */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
 }

@@ -21,7 +21,7 @@ export class Box extends Component {
         className="box"
         style={{background: boxColor}}
       >
-      {this.props.testColor}
+      {/* {this.props.testColor} */}
       </div>
     );
   }
